@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var createApp = require('../dist/app');
+
+// call with options to configure, such as with specific adapter
+// createApp({adapter: 'db'}); 
+var app = createApp();
+
+var server = require('../dist/server');
+server.serve(app);
+
