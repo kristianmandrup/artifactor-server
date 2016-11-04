@@ -1,0 +1,18 @@
+{
+  "extends": "standard",
+  "installedESLint": true,
+  "plugins": [
+    "standard",
+    "promise",
+    "babel",
+    "filenames"
+  ],
+  "globals": {
+    "expect": true,
+    "describe": true,
+    "it": true
+  },
+  "rules": {
+    "filenames/match-regex": [2, "^[a-z-\\.]+$", true]
+  }
+}

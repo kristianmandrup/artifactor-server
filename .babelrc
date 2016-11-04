@@ -1,10 +1,11 @@
 {
-  "presets": ["es2017"],
+  "presets": ["latest-minimal"],
   "plugins": [
-    "add-module-exports",
-    "syntax-async-functions",
-    "transform-regenerator",
+    "transform-es2015-duplicate-keys",
+    "transform-es2015-modules-commonjs",
+    "syntax-trailing-function-commas",
+    "transform-async-to-generator",
     "transform-decorators-legacy",
-    "transform-class-properties"
+    "transform-flow-strip-types"
   ]
 }

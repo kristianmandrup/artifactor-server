@@ -12,38 +12,40 @@ All Artifactor projects are based on Node.js 7 and ES2018 with decorators and as
 
 `npm i artifactor-server --save`
 
-### Build
-TODO: Use webpack
+## Development environment
 
-`npm run build` - builds `/src` folder and puts resulting ES5 `.js` files in `/dist`
-
-### Auto build
-TODO: Use webpack
-
-`npm run watch` - builds `/src` and watches for changes to `/src` files for auto-build!
-
-### Run
-TODO: Use webpack
-
-- `$ npm start` or `$ npm koa` - start the server
-
-_NOTICE_: Please be aware that the server doesn't respond to the root route.
-So to test it, try a route like:
-
-`http://localhost:3000/components/contacts`
-
-### Troubleshooting
-TODO: Use webpack
-
-If you still get an error, try removing the `dist` folder:
-
-`rm -r dist`
-
-Then recompile via `build` or `watch` task and start server again.
+Please see the `docs` folder, in particular `docs/env-setup/library-dev.md` 
+which describes the full development environment, how it was configured etc.
 
 ### Run Test or Test suite
 
-Unit tests are written using [mocha-test-dsl](https://www.npmjs.com/package/mocha-test-dsl)
+`npm test`
+
+Write tests using either:
+- [ava](https://github.com/ava/ava)
+- or [mocha-test-dsl](https://www.npmjs.com/package/mocha-test-dsl) if you prefer using [mocha]
+
+Note that Ava can use `spec` syntax via [ava-spec]()
+
+- Ava testing framework: [ava](https://github.com/ava/ava)
+- BDD: [ava-spec](https://www.npmjs.com/package/ava-spec)
+- test doubles: [testdouble.js]()
+
+
+### Run
+First build using webpack
+
+- `$ npm start` or `$ npm koa` start the server 
+
+Note: You need to reconfigure the `/bin` scripts to call the Webpack bundled file instead!
+
+Please be aware that the REST server routes don't respond to the root route.
+So to test it, try a specific route like:
+
+`http://localhost:3000/components/contacts`
+
+Even better: Make the root route respond with a list of links to the routes you with to test.
+Would be perfect if you could dynamically write the `<a>` tags using the routes defined in the router!!
 
 ## Architecture  
 
