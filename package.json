@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "./node_modules/.bin/nodemon bin/run",
+    "koa": "./node_modules/.bin/runkoa bin/www",
+    "pm2": "pm2 start bin/run ",
     "bn": "npm-run babel-node $@",
     "test": "npm run fix && npm run cover",
     "ava": "ava",
