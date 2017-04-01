@@ -1,5 +1,7 @@
 # Artifact Server
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kristianmandrup/artifactor-server.svg?token=ddc015ae5b039f29d6de8b5f3e575e4be05904f26594e279ee1bc83e6db0f8a8)](https://greenkeeper.io/)
+
 [Koa 2](koajs.com) server with sockets routes:
 
 - sockets via [Feathers.js](feathersjs.com/)
